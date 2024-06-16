@@ -1,23 +1,12 @@
 <script setup lang="ts">
-import { useAppStore } from '@/stores/app.store';
-
-const store = useAppStore();
-
-const count = computed(() => store.count);
 </script>
 
 <template>
-  <header aria-label="Site Header" class="bg-gray-50">
-    Options Header
-  </header>
+  <Header></Header>
 
   <RouterView></RouterView>
 
-  <p>Count: {{ count }}</p>
-
-  <footer aria-label="Site Footer" class="bg-gray-50">
-    Options Footer
-  </footer>
+  <Footer></Footer>
 </template>
 
 <style scoped></style>

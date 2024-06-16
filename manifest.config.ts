@@ -27,12 +27,30 @@ export default defineManifest(async (env) => ({
   content_scripts: [
     {
       all_frames: false,
-      js: ['src/content-script/index.ts'],
-      matches: ['*://*/*'],
+      js: ['src/content-script/subscriptionsScraper.ts'],
+      matches: ['https://podcasts.google.com/subscriptions*'],
+      run_at: 'document_end',
+    },
+    {
+      all_frames: false,
+      js: ['src/content-script/feedScraper.ts'],
+      matches: ['https://podcasts.google.com/feed/*'],
+      run_at: 'document_end',
+    },
+    {
+      all_frames: false,
+      js: ['src/content-script/queueScraper.ts'],
+      matches: ['https://podcasts.google.com/queue*'],
       run_at: 'document_end',
     },
   ],
-  host_permissions: ['*://*/*'],
+  icons: {
+    16: 'src/assets/icon16.png',
+    32: 'src/assets/icon32.png',
+    48: 'src/assets/icon48.png',
+    128: 'src/assets/icon128.png',
+  },
+  host_permissions: ['https://podcasts.google.com/*'],
   options_page: 'src/options/index.html',
   permissions: ['storage'],
   web_accessible_resources: [],
