@@ -2,6 +2,8 @@
 
 [![build](https://github.com/relevai/google-podcasts-export/actions/workflows/build.yml/badge.svg)](https://github.com/relevai/google-podcasts-export/actions/workflows/build.yml) [![release](https://github.com/relevai/google-podcasts-export/actions/workflows/release.yml/badge.svg)](https://github.com/relevai/google-podcasts-export/actions/workflows/release.yml)
 
+**Update!** Extension is now available on Chrome Webstore https://chromewebstore.google.com/detail/google-podcasts-export/dfhfkmolabaklhefjpdhlobckhckckdc?pli=1
+
 > Google Podcasts is saying goodbye.
 > After June 23, 2024, you will no longer be able to listen to podcasts in Google Podcasts.
 
@@ -21,7 +23,7 @@ You can download exported data either in XLSX or JSON format.
 - Time Remaining
 - Export in JSON or XLSX format
 
-## Usage
+## Usage in developer mode
 
 To load an extension in developer mode in Chrome, follow these steps:
 
